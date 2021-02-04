@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace UserRegistrationValidation
 {
-   public class RegexValidation
+    public class RegexValidation
     {
 
         public static string FIRST_NAME = "^[A-Z]{1}[A-Za-z]{2,}$";
@@ -18,43 +18,89 @@ namespace UserRegistrationValidation
         public static string PASSWORD04 = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!_%*#?&]{1})[a-zA-Z0-9@$!_%*#?&]{8,}$";
         public static bool FirstNameMatch(string first_name)
         {
-            bool result = Regex.IsMatch(first_name, FIRST_NAME);
+            Func< string, bool> status = ( FIRST_NAME) =>
+            {
+                bool result = Regex.IsMatch(first_name, FIRST_NAME);
+                return result;
+            };
+            bool result = status.Invoke("^[A-Z]{1}[A-Za-z]{2,}$");
             return result;
         }
+
+
+
         public static bool LastNameMatch(string last_name)
         {
-            bool result = Regex.IsMatch(last_name, LAST_NAME);
+            Func< string, bool> status = ( FIRST_NAME) =>
+            {
+                bool result = Regex.IsMatch(last_name, FIRST_NAME);
+                return result;
+            };
+            bool result = status.Invoke("^[A-Z]{1}[A-Za-z]{2,}$");
             return result;
         }
         public static bool EmailMatch(string email)
         {
-            bool result = Regex.IsMatch(email, EMAIL);
+            Func< string, bool> status = ( Email) =>
+            {
+                bool result = Regex.IsMatch(email, Email);
+                return result;
+            };
+            bool result = status.Invoke("^[1-9A-Za-z]+[.][a-zA-Z]*@(bl)[.](co)([.](in))?$");
             return result;
         }
-        public static bool MobileNumberMatch(string mobile_number)
+        public static bool MobileNumberMatch(string phone_number)
         {
-            bool result = Regex.IsMatch(mobile_number, MOBILE_NUMBER);
+            Func<string, bool> status = ( MOBILE_NUMBER) =>
+            {
+                bool result = Regex.IsMatch(phone_number, MOBILE_NUMBER);
+                return result;
+            };
+            bool result = status.Invoke("^(91)[ ][789][0-9]{9}$");
             return result;
         }
-        public static bool PasswordMatch(string password01)
+        public static bool PasswordMatch(string password)
         {
-            bool result = Regex.IsMatch(password01, PASSWORD01);
+            Func< string, bool> status = ( PASSWORD01) =>
+            {
+                bool result = Regex.IsMatch(password, PASSWORD01);
+                return result;
+            };
+            bool result = status.Invoke("^[A-Za-z0-9]{8,}$");
             return result;
         }
-        public static bool PasswordMatch02(string password02)
+        public static bool PasswordMatch02(string password)
         {
-            bool result = Regex.IsMatch(password02, PASSWORD02);
+            Func< string, bool> status = ( PASSWORD02) =>
+            {
+                bool result = Regex.IsMatch(password, PASSWORD02);
+                return result;
+            };
+            bool result = status.Invoke( "^(?=.*[A-Z])[a-zA-Z0-9]{8,}$");
             return result;
+
         }
-        public static bool PasswordMatch03(string password03)
+        public static bool PasswordMatch03(string password)
         {
-            bool result = Regex.IsMatch(password03, PASSWORD03);
+            Func< string, bool> status = ( PASSWORD03) =>
+            {
+                bool result = Regex.IsMatch(password, PASSWORD03);
+                return result;
+            };
+            bool result = status.Invoke( "^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$");
             return result;
+
         }
-        public static bool PasswordMatch04(string password04)
+        public static bool PasswordMatch04(string password)
         {
-            bool result = Regex.IsMatch(password04, PASSWORD04);
+            Func< string, bool> status = ( PASSWORD04) =>
+            {
+                bool result = Regex.IsMatch(password, PASSWORD04);
+                return result;
+            };
+            bool result = status.Invoke("^(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!_%*#?&]{1})[a-zA-Z0-9@$!_%*#?&]{8,}$");
             return result;
+
         }
     }
 }

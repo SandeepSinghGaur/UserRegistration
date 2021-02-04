@@ -30,7 +30,7 @@ namespace UserRegistrationUnitTesting
         [TestMethod]
         public void GivenEmailPattern_WhenValidate_ReturnTrue()
         {
-            bool isValid = RegexValidation.EmailMatch("Sandeep.singh@bl.co.in");
+            bool isValid = RegexValidation.EmailMatch("Singh.Sandeep@bl.co.in");
             Assert.IsTrue(isValid);
         }
         //<Summary>
@@ -48,7 +48,7 @@ namespace UserRegistrationUnitTesting
         [TestMethod]
         public void GivenPasswordSampleOne_WhenTestingValidation_ReturnTure()
         {
-            bool isValid = RegexValidation.PasswordMatch("SandeepSingh");
+            bool isValid = RegexValidation.PasswordMatch("Sandeep123");
             Assert.IsTrue(isValid);
         }
         //<Summary>
@@ -66,7 +66,7 @@ namespace UserRegistrationUnitTesting
         [TestMethod]
         public void GivenPasswordSamplethree_WhenTestingValidation_ReturnTure()
         {
-            bool isValid = RegexValidation.PasswordMatch03("Sandeep3Singh");
+            bool isValid = RegexValidation.PasswordMatch03("Sandeep1Singh");
             Assert.IsTrue(isValid);
         }
         //<Summary>
@@ -75,7 +75,7 @@ namespace UserRegistrationUnitTesting
         [TestMethod]
         public void GivenPasswordSampleFour_WhenTestingValidation_ReturnTure()
         {
-            bool isValid = RegexValidation.PasswordMatch04("Sandeep@26nas");
+            bool isValid = RegexValidation.PasswordMatch04("SandeepSingh123@");
             Assert.IsTrue(isValid);
         }
     }

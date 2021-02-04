@@ -31,7 +31,9 @@ namespace UserRegistrationValidation
             //Console.WriteLine("Enter Password With Condition :Password Having exactly one special character");
             //string password04 = Console.ReadLine();
             //RegexValidation.PasswordMatch04(password04);
-            Console.WriteLine("By Using MS Test Technique should Validate the given Pattern");
+            //Console.WriteLine("By Using MS Test Technique should Validate the given Pattern");
+            Console.WriteLine("Validate the All Given Pattern");
+            Console.WriteLine("Using MS Test and Lamda Expression inside RegexValidation Class ");
 
         }
     }
