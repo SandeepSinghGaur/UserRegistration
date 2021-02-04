@@ -25,9 +25,13 @@ namespace UserRegistrationValidation
             //Console.WriteLine("Enter Password With Condition :Password Having atleast One UpperCase");
             //string password02 = Console.ReadLine();
             //RegexValidation.PasswordMatch02(password02);
-            Console.WriteLine("Enter Password With Condition :Password Having atleast One UpperCase and One Numeric");
-            string password03 = Console.ReadLine();
-            RegexValidation.PasswordMatch03(password03);
+            //Console.WriteLine("Enter Password With Condition :Password Having atleast One UpperCase and One Numeric");
+            //string password03 = Console.ReadLine();
+            //RegexValidation.PasswordMatch03(password03);
+            Console.WriteLine("Enter Password With Condition :Password Having exactly one special character");
+            string password04 = Console.ReadLine();
+            RegexValidation.PasswordMatch04(password04);
+
         }
     }
 }
