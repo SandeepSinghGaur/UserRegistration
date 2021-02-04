@@ -55,5 +55,15 @@ namespace UserRegistrationValidation
                 Console.WriteLine("No ! Password is not Validate");
 
         }
+        public static string PASSWORD02 = "^(?=.*[A-Z])[a-zA-Z0-9]{8,}$";
+        public static void PasswordMatch02(string password02)
+        {
+            bool result = Regex.IsMatch(password02, PASSWORD02);
+            if (result == true)
+                Console.WriteLine("Yes ! Password is Validate");
+            else
+                Console.WriteLine("No ! Password is not Validate");
+
+        }
     }
 }

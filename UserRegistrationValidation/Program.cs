@@ -19,9 +19,12 @@ namespace UserRegistrationValidation
             //Console.WriteLine("Enter Mobile Number :");
             //string mobile_number = Console.ReadLine();
             //RegexValidation.MobileNumberMatch(mobile_number);
-            Console.WriteLine("Enter Password With First Condition :");
-            string password01 = Console.ReadLine();
-            RegexValidation.PasswordMatch(password01);
+            //Console.WriteLine("Enter Password With First Condition :");
+            //string password01 = Console.ReadLine();
+            //RegexValidation.PasswordMatch(password01);
+            Console.WriteLine("Enter Password With Condition :Password Having atleast One UpperCase");
+            string password02 = Console.ReadLine();
+            RegexValidation.PasswordMatch02(password02);
         }
     }
 }
