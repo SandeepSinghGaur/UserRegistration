@@ -22,9 +22,12 @@ namespace UserRegistrationValidation
             //Console.WriteLine("Enter Password With First Condition :");
             //string password01 = Console.ReadLine();
             //RegexValidation.PasswordMatch(password01);
-            Console.WriteLine("Enter Password With Condition :Password Having atleast One UpperCase");
-            string password02 = Console.ReadLine();
-            RegexValidation.PasswordMatch02(password02);
+            //Console.WriteLine("Enter Password With Condition :Password Having atleast One UpperCase");
+            //string password02 = Console.ReadLine();
+            //RegexValidation.PasswordMatch02(password02);
+            Console.WriteLine("Enter Password With Condition :Password Having atleast One UpperCase and One Numeric");
+            string password03 = Console.ReadLine();
+            RegexValidation.PasswordMatch03(password03);
         }
     }
 }
