@@ -26,5 +26,15 @@ namespace UserRegistrationValidation
             else
                 Console.WriteLine("No ! Last Name is not Validate");
         }
+        public static string EMAIL = "^[1-9A-Za-z]+[.][a-zA-Z]*@(bl)[.](co)([.](in))?$";
+        public static void EmailMatch(string email)
+        {
+            bool result = Regex.IsMatch(email, EMAIL);
+            if (result == true)
+                Console.WriteLine("Yes ! Email is Validate");
+            else
+                Console.WriteLine("No ! Email is not Validate");
+
+        }
     }
 }
