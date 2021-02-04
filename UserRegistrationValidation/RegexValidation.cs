@@ -36,5 +36,14 @@ namespace UserRegistrationValidation
                 Console.WriteLine("No ! Email is not Validate");
 
         }
+        public static string MOBILE_NUMBER = "^(91)[ ][789][0-9]{9}$";
+        public static void MobileNumberMatch(string mobile_number)
+        {
+            bool result = Regex.IsMatch(mobile_number, MOBILE_NUMBER);
+            if (result == true)
+                Console.WriteLine("Yes ! Mobile Number is Validate");
+            else
+                Console.WriteLine("No ! Mobile Number is not Validate");
+        }
     }
 }
