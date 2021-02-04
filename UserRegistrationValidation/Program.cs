@@ -16,9 +16,12 @@ namespace UserRegistrationValidation
             //Console.WriteLine("Enter Email :");
             //string email = Console.ReadLine();
             //RegexValidation.EmailMatch(email);
-            Console.WriteLine("Enter Mobile Number :");
-            string mobile_number = Console.ReadLine();
-            RegexValidation.MobileNumberMatch(mobile_number);
+            //Console.WriteLine("Enter Mobile Number :");
+            //string mobile_number = Console.ReadLine();
+            //RegexValidation.MobileNumberMatch(mobile_number);
+            Console.WriteLine("Enter Password With First Condition :");
+            string password01 = Console.ReadLine();
+            RegexValidation.PasswordMatch(password01);
         }
     }
 }

@@ -45,5 +45,15 @@ namespace UserRegistrationValidation
             else
                 Console.WriteLine("No ! Mobile Number is not Validate");
         }
+        public static string PASSWORD01 = "^[A-Za-z0-9]{8,}$";
+        public static void PasswordMatch(string password01)
+        {
+            bool result = Regex.IsMatch(password01, PASSWORD01);
+            if (result == true)
+                Console.WriteLine("Yes ! Password is Validate");
+            else
+                Console.WriteLine("No ! Password is not Validate");
+
+        }
     }
 }
